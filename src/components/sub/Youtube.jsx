@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import Layout from '../common/Layout';
 
+/* //숫자 버튼 데이터 처리
 export default function Youtube() {
 	const [Num, setNum] = useState(0);
 	const minusNum = () => {
@@ -14,3 +15,24 @@ export default function Youtube() {
 		</Layout>
 	);
 }
+*/
+
+
+export default function Youtube() {
+	const [Colors, setColors] = useState(['red','green','blue']);
+		return (
+		<Layout title={'YOUTUBE'}>
+		<ul>
+			{Colors.map((color, idx) => {
+				return (
+					<li style={{color: color}} key={idx}>
+						{color}
+					</li>
+				);
+			})}	
+		</ul>
+		</Layout>
+	);
+}
+
+// 속성과 속성명이 같을 경우 1번만 써줘도 됨 {{color:color}} == {{color}}
